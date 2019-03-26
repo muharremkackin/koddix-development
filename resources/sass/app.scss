@@ -1,12 +1,18 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// Bulma
+@import '~bulma/bulma';
+
+// Font Awesome
+@import '~font-awesome/scss/font-awesome';
+
+// Vue Bulma Modules
+@import '~buefy/src/scss/buefy';
 
 .navbar-laravel {
   background-color: #fff;
