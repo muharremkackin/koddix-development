@@ -14,7 +14,6 @@
 // Vue Bulma Modules
 @import '~buefy/src/scss/buefy';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
+@import "dev/overrides";
+@import "dev/helpers";
+@import "dev/main";
