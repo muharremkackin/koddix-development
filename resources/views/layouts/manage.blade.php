@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Management - {{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -24,12 +24,17 @@
 
 <div id="app">
 
-
     @include('includes.navigation.main')
 
-    <main class="">
-        @yield('content')
-    </main>
+    <div class="columns m-t-10">
+        @include('includes.navigation.manage')
+
+        <main class="column is-four-fifths">
+            @yield('content')
+        </main>
+    </div>
 </div>
+@include('includes.script.vue_app')
 </body>
 </html>
+

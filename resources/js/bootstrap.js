@@ -1,6 +1,11 @@
+import Vue from 'vue';
+import Buefy from 'buefy';
+import 'buefy/dist/buefy.css'
 
 window._ = require('lodash');
 
+window.Vue = Vue;
+Vue.use(Buefy);
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This

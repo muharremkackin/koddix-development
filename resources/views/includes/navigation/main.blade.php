@@ -49,15 +49,20 @@
                                     <i class="fa fa-fw fa-gear"></i>
                                 </span>Settings
                             </a>
+                            @if(Laratrust::hasRole('superadministrator'))
+                            <a href="{{ route('manage.dashboard') }}" class="navbar-item">
+                                <span class="icon has-text-primary is-medium">
+                                    <i class="fa fa-fw fa-gears"></i>
+                                </span>Management
+                            </a>
+                            @endif
                             <hr class="navbar-divider">
                             <a href="{{ route('logout') }}" class="navbar-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <span class="icon has-text-primary is-medium">
                                     <i class="fa fa-fw fa-sign-out"></i>
                                 </span>Log out
                             </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
+                            @include('includes.form.logout')
                         </div>
                     </div>
                 </div>
